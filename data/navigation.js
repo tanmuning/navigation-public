@@ -142,10 +142,17 @@ const navigationData = [
         layout: "list",
         items: [
             {
-                title: "西装 / 西装套装",
+                title: "正装上装",
                 action: {
                     type: "link",
                     value: "recommend.html?category=suit"
+                }
+            },
+            {
+                title: "正装套装",
+                action: {
+                    type: "link",
+                    value: "recommend.html?category=suitSet"
                 }
             },
             {
@@ -197,15 +204,21 @@ const navigationData = [
 /* 开款图片由 GitHub Pages 自动生成清单，无需登记文件名。 */
 const recommendationGalleries = {
     suit: {
-        title: "西装 / 西装套装",
+        title: "正装上装",
         showContact: true,
         showKeywords: true,
         sections: [
-            { title: "组合形式", folder: "assets/recommendations/suit/combinations" },
             { title: "推荐开发方向", folder: "assets/recommendations/suit/development" },
             { title: "推荐颜色", folder: "assets/recommendations/suit/colors" },
             { title: "推荐面料 / 纹样", folder: "assets/recommendations/suit/fabrics" },
             { title: "推荐细节", folder: "assets/recommendations/suit/details" }
+        ]
+    },
+    suitSet: {
+        title: "正装套装",
+        showContact: true,
+        sections: [
+            { title: "组合形式", folder: "assets/recommendations/suit-set/combinations" }
         ]
     },
     trousers: {
