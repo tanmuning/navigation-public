@@ -1,0 +1,63 @@
+---
+---
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="叹木宁导航站开款推荐">
+    <title>开款推荐 - 叹木宁导航站</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body class="gallery-page">
+    <header class="gallery-header">
+        <div class="gallery-header-inner">
+            <a class="gallery-back" href="index.html#section-hot">← 返回开款推荐</a>
+            <button id="galleryThemeToggle" class="gallery-theme-toggle" type="button" aria-label="切换深色模式">🌙</button>
+        </div>
+    </header>
+    <main class="gallery-main">
+        <aside id="galleryContactBanner" class="gallery-contact-banner" hidden>
+            <span class="gallery-contact-label">推款提示</span>
+            <p>
+                本页面款式仅供方向性参考。有开款、补货能力的商家，可联系买手获取最新重点款式及开款细节图：
+                <strong id="galleryContactName"></strong>
+                <button id="galleryWechatCopy" class="gallery-wechat-copy" type="button"></button>
+            </p>
+        </aside>
+        <div class="gallery-heading">
+            <div><span class="gallery-eyebrow">STYLE REFERENCES</span><h1 id="galleryTitle">开款推荐</h1></div>
+            <span id="galleryCount" class="gallery-count"></span>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+        <div id="galleryEmpty" class="gallery-empty" hidden>
+            <strong>暂未添加图片</strong>
+            <p>将图片放入对应分类文件夹并推送到 GitHub，页面就会自动显示。</p>
+        </div>
+        <aside class="gallery-disclaimer" aria-labelledby="galleryDisclaimerTitle">
+            <h2 id="galleryDisclaimerTitle">图片及版权声明</h2>
+            <p>
+                本页部分图片整理自公开网络，仅用于款式趋势展示、选款参考及行业交流。相关图片的著作权及其他合法权益归原作者或相关权利人所有，本站不主张对其享有著作权；页面展示亦不代表本站获得相关品牌、商品或人物的授权、关联或背书。
+            </p>
+            <p>
+                如您是相关权利人，认为本页内容侵犯了您的合法权益，请通过本站公布的联系方式与我们联系，并提供权属证明及具体图片信息。我们将在核实后及时删除或作出相应处理。
+            </p>
+        </aside>
+    </main>
+    <div id="galleryLightbox" class="gallery-lightbox" hidden>
+        <button class="gallery-lightbox-close" type="button" aria-label="关闭">×</button>
+        <img src="" alt="">
+    </div>
+    <div class="gallery-file-manifest" hidden>
+        {% for file in site.static_files %}
+            {% assign ext = file.extname | downcase %}
+            {% if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.webp' or ext == '.gif' or ext == '.avif' %}
+                <span data-gallery-image data-path="{{ file.path }}" data-name="{{ file.name }}" data-url="{{ site.baseurl }}{{ file.path }}"></span>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <script src="data/navigation.js"></script>
+    <script src="js/gallery.js"></script>
+</body>
+</html>
