@@ -86,10 +86,14 @@
     }
 
     .optimization-grid,
-    .direction-grid,
     .service-tools,
     .contact-strip {
         grid-template-columns: 1fr;
+    }
+
+    .direction-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
     }
 
     .optimization-grid article,
@@ -110,7 +114,25 @@
     }
 
     .direction-card {
-        min-height: 145px;
+        min-width: 0;
+        min-height: 132px;
+        padding: 17px 10px 15px;
+    }
+
+    .direction-icon {
+        transform: scale(.86);
+        transform-origin: center;
+    }
+
+    .direction-card strong,
+    .optimization-grid h3,
+    .service-item strong,
+    .contact-item:not(.contact-address) strong,
+    .section-heading h1,
+    .home-section-title h2,
+    .category-heading h2 {
+        word-break: keep-all;
+        overflow-wrap: normal;
     }
 
     .contact-address strong {
@@ -140,6 +162,11 @@
     .announcement-title-row {
         flex-wrap: wrap;
         font-size: 13px;
+    }
+
+    .announcement-title-row strong {
+        word-break: normal;
+        overflow-wrap: anywhere;
     }
 
     .announcement-date {
@@ -199,5 +226,17 @@
         flex-direction: column;
         justify-content: center;
         gap: 5px;
+    }
+}
+
+@media (max-width: 360px) {
+    .announcement-item {
+        grid-template-columns: 40px 58px minmax(0, 1fr) 10px;
+        gap: 7px;
+        padding-inline: 12px;
+    }
+
+    .direction-card strong {
+        font-size: 14px;
     }
 }

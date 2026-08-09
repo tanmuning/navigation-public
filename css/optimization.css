@@ -82,4 +82,18 @@
     .carousel-order li { border-right: 0; border-bottom: 1px solid var(--border); }
     .optimization-contact { align-items: stretch; flex-direction: column; }
     .optimization-top-nav { display: none; }
+    .optimization-intro h1,
+    .diagnosis-entry-heading h2,
+    .optimization-methods-heading h2,
+    .optimization-heading h2,
+    .diagnosis-card strong,
+    .guide-panel h3,
+    .carousel-order h3,
+    .detail-module-list h3,
+    .optimization-contact button {
+        word-break: keep-all;
+        overflow-wrap: normal;
+    }
+    .optimization-table { min-width: 560px; }
+    .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
