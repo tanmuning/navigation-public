@@ -96,45 +96,19 @@ const recommendationGalleries = {
         sections: [
             {
                 title: "推荐套装组合",
-                folder: "assets/recommendations/suit-set/01-combinations",
-                items: [
-                    { title: "西装＋西裤", tag: "核心基础" },
-                    { title: "马甲＋西裤", tag: "差异化方向" },
-                    { title: "西装＋马甲＋西裤", tag: "趋势重点" }
-                ]
+                folder: "assets/recommendations/suit-set/01-combinations"
             },
             {
                 title: "推荐开款方向",
-                folder: "assets/recommendations/suit-set/02-development",
-                items: [
-                    { title: "经典商务套装", tag: "核心基础" },
-                    { title: "轻商务通勤套装", tag: "核心基础" },
-                    { title: "婚礼宴会套装", tag: "趋势重点" },
-                    { title: "复古绅士套装", tag: "差异化方向" },
-                    { title: "夏季轻量套装", tag: "季节重点" }
-                ]
+                folder: "assets/recommendations/suit-set/02-development"
             },
             {
                 title: "推荐整体版型",
-                folder: "assets/recommendations/suit-set/03-fit",
-                items: [
-                    { title: "标准合体套装", tag: "核心基础" },
-                    { title: "修身套装", tag: "核心基础" },
-                    { title: "宽松直身套装", tag: "趋势重点" },
-                    { title: "上合体＋下宽松", tag: "趋势重点" },
-                    { title: "高腰复古套装", tag: "差异化方向" }
-                ]
+                folder: "assets/recommendations/suit-set/03-fit"
             },
             {
                 title: "推荐成套视觉",
-                folder: "assets/recommendations/suit-set/04-visual",
-                items: [
-                    { title: "同色同料纯色套装", tag: "核心基础" },
-                    { title: "同色细纹套装", tag: "品质升级" },
-                    { title: "商务细条纹套装", tag: "趋势重点" },
-                    { title: "复古格纹套装", tag: "差异化方向" },
-                    { title: "撞色马甲三件套", tag: "谨慎开发" }
-                ]
+                folder: "assets/recommendations/suit-set/04-visual"
             }
         ]
     },
