@@ -92,8 +92,61 @@ const recommendationGalleries = {
     suitSet: {
         title: "正装套装",
         showContact: true,
+        priorityGuide: "推荐等级用于判断开发顺序：核心基础优先备款，趋势重点优先测试，差异化方向控制数量，谨慎开发建议小量验证。",
         sections: [
-            { title: "组合形式", folder: "assets/recommendations/suit-set/combinations" }
+            {
+                title: "推荐套装组合",
+                folder: "assets/recommendations/suit-set/01-combinations",
+                items: [
+                    { title: "西装＋西裤", tag: "核心基础" },
+                    { title: "马甲＋西裤", tag: "差异化方向" },
+                    { title: "西装＋马甲＋西裤", tag: "趋势重点" }
+                ]
+            },
+            {
+                title: "推荐开款方向",
+                folder: "assets/recommendations/suit-set/02-development",
+                items: [
+                    { title: "经典商务套装", tag: "核心基础" },
+                    { title: "轻商务通勤套装", tag: "核心基础" },
+                    { title: "婚礼宴会套装", tag: "趋势重点" },
+                    { title: "复古绅士套装", tag: "差异化方向" },
+                    { title: "夏季轻量套装", tag: "季节重点" }
+                ]
+            },
+            {
+                title: "推荐整体版型",
+                folder: "assets/recommendations/suit-set/03-fit",
+                items: [
+                    { title: "标准合体套装", tag: "核心基础" },
+                    { title: "修身套装", tag: "核心基础" },
+                    { title: "宽松直身套装", tag: "趋势重点" },
+                    { title: "上合体＋下宽松", tag: "趋势重点" },
+                    { title: "高腰复古套装", tag: "差异化方向" }
+                ]
+            },
+            {
+                title: "推荐成套视觉",
+                folder: "assets/recommendations/suit-set/04-visual",
+                items: [
+                    { title: "同色同料纯色套装", tag: "核心基础" },
+                    { title: "同色细纹套装", tag: "品质升级" },
+                    { title: "商务细条纹套装", tag: "趋势重点" },
+                    { title: "复古格纹套装", tag: "差异化方向" },
+                    { title: "撞色马甲三件套", tag: "谨慎开发" }
+                ]
+            },
+            {
+                title: "推荐成套细节",
+                folder: "assets/recommendations/suit-set/05-details",
+                items: [
+                    { title: "西装与西裤同料同色", tag: "核心基础" },
+                    { title: "上装腰身与裤型协调", tag: "版型重点" },
+                    { title: "马甲下摆衔接高腰线", tag: "比例重点" },
+                    { title: "驳领纽扣与裤褶统一", tag: "品质升级" },
+                    { title: "内里备用扣与成套包装", tag: "实用升级" }
+                ]
+            }
         ]
     },
     trousers: {

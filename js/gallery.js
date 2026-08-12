@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     initGalleryTheme();
     initLightbox();
     initGalleryContact(gallery);
+    renderPriorityGuide(gallery);
 
     try {
         if (gallery.sections) {
@@ -27,16 +28,19 @@ document.addEventListener("DOMContentLoaded", async function () {
                 gallery.sections.map(async function (section) {
                     return {
                         title: section.title,
-                        images: await loadGalleryImages(section.folder)
+                        images: await loadGalleryImages(section.folder),
+                        items: section.items || []
                     };
                 })
             );
 
             const totalCount = sectionResults.reduce(function (total, section) {
-                return total + section.images.length;
+                return total + Math.max(section.images.length, section.items.length);
             }, 0);
 
-            count.textContent = totalCount + " 张图片";
+            count.textContent = totalCount + (gallery.sections.some(function (section) {
+                return section.items?.length;
+            }) ? " 项推荐" : " 张图片");
             grid.className = "gallery-section-list";
             sectionResults.forEach(function (section) {
                 renderGallerySection(grid, gallery, section);
@@ -78,13 +82,14 @@ function renderGallerySection(container, gallery, section) {
     title.textContent = section.title;
 
     const count = document.createElement("span");
-    count.textContent = section.images.length + " 张";
+    const cardCount = Math.max(section.images.length, section.items.length);
+    count.textContent = cardCount + " 项";
 
     heading.appendChild(title);
     heading.appendChild(count);
     sectionElement.appendChild(heading);
 
-    if (!section.images.length) {
+    if (!cardCount) {
         const empty = document.createElement("p");
         empty.className = "gallery-section-empty";
         empty.textContent = "该板块暂未添加图片";
@@ -92,10 +97,16 @@ function renderGallerySection(container, gallery, section) {
     } else {
         const grid = document.createElement("div");
         grid.className = "gallery-grid";
-        balanceGalleryGrid(grid, section.images.length);
-        section.images.forEach(function (item, index) {
-            renderGalleryCard(grid, gallery, item, index);
-        });
+        balanceGalleryGrid(grid, cardCount);
+        for (let index = 0; index < cardCount; index += 1) {
+            const definition = section.items[index];
+            const image = section.images[index];
+            if (image) {
+                renderGalleryCard(grid, gallery, image, index, definition);
+            } else if (definition) {
+                renderPlaceholderCard(grid, definition, index);
+            }
+        }
         sectionElement.appendChild(grid);
     }
 
@@ -131,7 +142,7 @@ async function loadGalleryImages(folder) {
         });
 }
 
-function renderGalleryCard(grid, gallery, item, index) {
+function renderGalleryCard(grid, gallery, item, index, definition) {
     const card = document.createElement("button");
     card.className = "gallery-card";
     card.type = "button";
@@ -157,7 +168,7 @@ function renderGalleryCard(grid, gallery, item, index) {
     const keywordSeparatorIndex = gallery.showKeywords
         ? cleanName.search(/[：:]/)
         : -1;
-    const imageTitle = (
+    const imageTitle = definition?.title || (
         keywordSeparatorIndex >= 0
             ? cleanName.slice(0, keywordSeparatorIndex)
             : cleanName
@@ -188,6 +199,8 @@ function renderGalleryCard(grid, gallery, item, index) {
     itemTitle.textContent = imageTitle;
     titleRow.appendChild(itemTitle);
 
+    if (definition?.tag && !tags.includes(definition.tag)) tags.push(definition.tag);
+
     if (tags.length) {
         const tagList = document.createElement("span");
         tagList.className = "gallery-card-tags";
@@ -217,6 +230,42 @@ function renderGalleryCard(grid, gallery, item, index) {
         openLightbox(image.src, image.alt);
     });
     grid.appendChild(card);
+}
+
+function renderPlaceholderCard(grid, definition, index) {
+    const card = document.createElement("article");
+    card.className = "gallery-card gallery-placeholder-card";
+
+    const image = document.createElement("div");
+    image.className = "gallery-placeholder-image";
+    image.setAttribute("aria-label", "待替换图片 " + (index + 1));
+    image.innerHTML = "<span>待替换图片</span><small>建议文件名：" + String(index + 1).padStart(2, "0") + "-" + definition.title + ".jpg</small>";
+
+    const info = document.createElement("span");
+    info.className = "gallery-card-info";
+    const row = document.createElement("span");
+    row.className = "gallery-card-title-row";
+    const title = document.createElement("strong");
+    title.textContent = definition.title;
+    const tags = document.createElement("span");
+    tags.className = "gallery-card-tags";
+    const tag = document.createElement("em");
+    tag.className = "gallery-tag-badge";
+    tag.textContent = definition.tag;
+    tags.appendChild(tag);
+    row.append(title, tags);
+    info.appendChild(row);
+    card.append(image, info);
+    grid.appendChild(card);
+}
+
+function renderPriorityGuide(gallery) {
+    if (!gallery.priorityGuide) return;
+    const heading = document.querySelector(".gallery-heading");
+    const guide = document.createElement("p");
+    guide.className = "gallery-priority-guide";
+    guide.textContent = gallery.priorityGuide;
+    heading.insertAdjacentElement("afterend", guide);
 }
 
 function renderGalleryError() {
