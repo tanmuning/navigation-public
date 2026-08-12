@@ -1353,3 +1353,45 @@ body.dark .top-navigation a {
     border-radius: 8px;
     box-shadow: none;
 }
+
+.featured-path-create-link {
+    min-height: 58px;
+    margin-bottom: 10px;
+    padding: 11px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    border: 1px solid #c9d9ea;
+    border-radius: 10px;
+    background: #f3f7fb;
+    color: #294766;
+}
+
+.featured-path-create-link:hover {
+    border-color: #9fb9d4;
+    background: #eaf2f8;
+}
+
+.featured-path-create-link span {
+    min-width: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.featured-path-create-link strong {
+    white-space: nowrap;
+}
+
+.featured-path-create-link small {
+    color: var(--muted);
+}
+
+.featured-path-create-link i {
+    flex-shrink: 0;
+    color: #58758f;
+    font-size: 13px;
+    font-style: normal;
+    white-space: nowrap;
+}

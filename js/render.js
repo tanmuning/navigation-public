@@ -123,6 +123,13 @@ function renderFeaturedPath() {
     list.className = "featured-path-list";
     list.id = "featuredPathList";
 
+    const createGoodsLink = document.createElement("a");
+    createGoodsLink.className = "featured-path-create-link";
+    createGoodsLink.href = "https://agentseller.temu.com/goods/create/category";
+    createGoodsLink.target = "_blank";
+    createGoodsLink.rel = "noopener noreferrer";
+    createGoodsLink.innerHTML = "<span><strong>新建商品</strong><small>进入 TEMU 商品创建页面</small></span><i>打开页面 ↗</i>";
+
     const toggle = document.createElement("button");
     toggle.className = "featured-path-toggle";
     toggle.type = "button";
@@ -188,7 +195,7 @@ function renderFeaturedPath() {
         list.appendChild(row);
     });
 
-    container.replaceChildren(heading, list);
+    container.replaceChildren(heading, createGoodsLink, list);
 }
 
 function setPathToggleState(button, collapsed) {

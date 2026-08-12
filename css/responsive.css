@@ -111,6 +111,12 @@
         grid-template-columns: 110px minmax(0, 1fr);
     }
 
+    .featured-path-create-link span {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 2px;
+    }
+
     .direction-card {
         min-width: 0;
         min-height: 132px;
