@@ -1213,6 +1213,57 @@ body.dark .top-navigation a {
     font-size: 14px;
 }
 
+.service-tool-group {
+    padding: 0;
+    display: grid;
+    grid-template-columns: minmax(100px, .75fr) minmax(180px, 1.25fr);
+    gap: 0;
+}
+
+.service-tool-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 18px;
+}
+
+.service-tool-links {
+    border-left: 1px solid var(--border);
+}
+
+.service-tool-links a {
+    min-height: 40px;
+    padding: 8px 14px;
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    align-items: center;
+    gap: 9px;
+    color: var(--text);
+    border-bottom: 1px solid var(--border);
+}
+
+.service-tool-links a:last-child {
+    border-bottom: 0;
+}
+
+.service-tool-links a:hover {
+    background: #f0f5f7;
+}
+
+.service-tool-links a span {
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -.02em;
+}
+
+.service-tool-links a i {
+    color: var(--muted);
+    font-size: 13px;
+    font-style: normal;
+}
+
 .contact-strip {
     margin-top: 18px;
     display: grid;

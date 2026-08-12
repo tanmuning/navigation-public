@@ -107,6 +107,10 @@
         border-bottom: 0;
     }
 
+    .service-tool-group {
+        grid-template-columns: 110px minmax(0, 1fr);
+    }
+
     .direction-card {
         min-width: 0;
         min-height: 132px;
