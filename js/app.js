@@ -112,6 +112,13 @@ function initNavigation() {
 
             event.preventDefault();
 
+            if (link.hasAttribute("data-open-path")) {
+                const pathPanel = document.getElementById("featuredPath");
+                const pathToggle = document.getElementById("pathToggle");
+                if (pathPanel) pathPanel.hidden = false;
+                if (pathToggle) pathToggle.setAttribute("aria-expanded", "true");
+            }
+
             const targetPosition =
                 target.getBoundingClientRect().top +
                 window.scrollY;

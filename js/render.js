@@ -87,12 +87,14 @@ function initHomeServices() {
     const pathPanel = document.getElementById("featuredPath");
 
     if (pathToggle && pathPanel) {
+        pathToggle.setAttribute("aria-expanded", String(!pathPanel.hidden));
         pathToggle.addEventListener("click", function () {
             const willOpen = pathPanel.hidden;
             document.querySelectorAll(".service-detail-panel").forEach(function (panel) {
                 panel.hidden = true;
             });
             pathPanel.hidden = !willOpen;
+            pathToggle.setAttribute("aria-expanded", String(willOpen));
             if (willOpen) pathPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
     }
