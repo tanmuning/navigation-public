@@ -39,18 +39,20 @@ function renderAnnouncements() {
         date.className = "announcement-date";
         date.textContent = item.date;
 
+        const status = document.createElement("div");
+        status.className = "announcement-status";
+        if (item.isNew) {
+            const badge = document.createElement("span");
+            badge.className = "announcement-badge new";
+            badge.textContent = "NEW";
+            status.appendChild(badge);
+        }
+
         const content = document.createElement("div");
         content.className = "announcement-content";
 
         const titleRow = document.createElement("div");
         titleRow.className = "announcement-title-row";
-        if (item.isNew) {
-            const badge = document.createElement("span");
-            badge.className = "announcement-badge new";
-            badge.textContent = "NEW";
-            titleRow.appendChild(badge);
-        }
-
         const title = document.createElement("strong");
         title.textContent = item.title;
         titleRow.appendChild(title);
@@ -60,7 +62,7 @@ function renderAnnouncements() {
         arrow.className = "announcement-arrow";
         arrow.textContent = "›";
 
-        row.append(leading, date, content, arrow);
+        row.append(leading, date, status, content, arrow);
 
         if (item.action) {
             row.classList.add("is-clickable");
