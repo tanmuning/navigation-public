@@ -1264,6 +1264,18 @@ body.dark .top-navigation a {
     font-style: normal;
 }
 
+.service-tool-links a strong {
+    min-width: 0;
+    white-space: nowrap;
+}
+
+.service-tool-links a small {
+    margin-left: 6px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 500;
+}
+
 .contact-strip {
     margin-top: 18px;
     display: grid;
