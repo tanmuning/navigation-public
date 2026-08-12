@@ -135,17 +135,6 @@ const recommendationGalleries = {
                     { title: "复古格纹套装", tag: "差异化方向" },
                     { title: "撞色马甲三件套", tag: "谨慎开发" }
                 ]
-            },
-            {
-                title: "推荐成套细节",
-                folder: "assets/recommendations/suit-set/05-details",
-                items: [
-                    { title: "西装与西裤同料同色", tag: "核心基础" },
-                    { title: "上装腰身与裤型协调", tag: "版型重点" },
-                    { title: "马甲下摆衔接高腰线", tag: "比例重点" },
-                    { title: "驳领纽扣与裤褶统一", tag: "品质升级" },
-                    { title: "内里备用扣与成套包装", tag: "实用升级" }
-                ]
             }
         ]
     },
