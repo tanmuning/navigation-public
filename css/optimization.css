@@ -24,6 +24,26 @@
 .formula-box { padding: 24px 28px; border-left: 3px solid #b88a50; background: #fff; }
 .formula-box small { display: block; margin-bottom: 9px; color: var(--muted); }
 .formula-box strong { font-size: 17px; line-height: 1.7; }
+.formula-box p { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.65; }
+.title-formula-stack { display: grid; grid-template-columns: .8fr 1.2fr; gap: 14px; }
+.formula-core { border-left-color: #7d95a4; }
+.keyword-priority { margin-top: 14px; padding: 17px 21px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 20px; border: 1px solid var(--border); border-radius: 9px; background: #f1f5f6; }
+.keyword-priority > span { color: #8f6a3a; font-size: 11px; font-weight: 800; white-space: nowrap; }
+.keyword-priority ol { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); list-style: none; }
+.keyword-priority li { position: relative; padding: 2px 15px; border-right: 1px solid var(--border); color: #51616c; font-size: 11px; text-align: center; white-space: nowrap; }
+.keyword-priority li:last-child { border-right: 0; }
+.keyword-priority li::before { content: counter(list-item, decimal-leading-zero); display: block; margin-bottom: 4px; color: #9a713d; font-family: Georgia, serif; font-size: 10px; }
+.category-title-grid { margin-top: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.title-template-card { padding: 24px 25px; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.title-template-card > div small { color: #9a713d; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.title-template-card h3 { margin: 6px 0 14px; font-size: 16px; }
+.title-template-card p { color: #52616c; font-size: 12px; line-height: 1.72; }
+.title-template-card .template-formula { min-height: 54px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #edf0f2; color: #768691; font-size: 11px; }
+.title-template-card button { margin-top: 18px; align-self: flex-start; padding: 9px 13px; border: 1px solid #bccbd4; border-radius: 6px; background: #f3f7f8; color: #3d5968; font-size: 10px; font-weight: 700; }
+.title-template-wide { grid-column: 1 / -1; }
+.title-template-wide .template-formula { min-height: auto; }
+.title-rules-columns { margin-top: 14px; }
+.title-note { margin-top: 14px; padding: 17px 20px; border-left: 3px solid #9a713d; background: #f3f6f7; color: #596873; font-size: 12px; line-height: 1.75; }
 .optimization-two-column { margin-top: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .guide-panel { padding: 26px 28px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
 .guide-panel h3, .carousel-order h3 { margin-bottom: 17px; font-size: 16px; }
@@ -69,6 +89,10 @@
     .visual-check-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
     .detail-module-list { grid-template-columns: repeat(2, 1fr); }
     .carousel-order ol { grid-template-columns: repeat(4, 1fr); }
+    .title-formula-stack { grid-template-columns: 1fr; }
+    .keyword-priority { grid-template-columns: 1fr; gap: 12px; }
+    .keyword-priority ol { grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--border); }
+    .keyword-priority li { padding: 9px; border: 0; background: #f1f5f6; }
 }
 @media (max-width: 600px) {
     .optimization-page .header-inner { grid-template-columns: minmax(0, 1fr) auto; }
@@ -76,7 +100,13 @@
     .optimization-container { width: calc(100% - 24px); margin-top: 18px; }
     .optimization-intro { padding: 30px 24px; }
     .diagnosis-entry-section { padding: 25px 20px; }
-    .diagnosis-grid, .optimization-two-column, .visual-check-grid, .detail-module-list, .static-checklist { grid-template-columns: 1fr; }
+    .diagnosis-grid, .optimization-two-column, .visual-check-grid, .detail-module-list, .static-checklist, .category-title-grid { grid-template-columns: 1fr; }
+    .title-template-wide { grid-column: auto; }
+    .formula-box { padding: 21px 20px; }
+    .formula-box strong { font-size: 15px; word-break: keep-all; overflow-wrap: normal; }
+    .keyword-priority ol { grid-template-columns: repeat(2, 1fr); }
+    .title-template-card { padding: 22px 20px; }
+    .title-template-card .template-formula { min-height: auto; }
     .visual-check-grid article { border-right: 0; border-bottom: 1px solid var(--border); }
     .example-box { grid-template-columns: 1fr; }
     .example-box > span { transform: rotate(90deg); }
