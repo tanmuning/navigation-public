@@ -68,9 +68,17 @@
 .optimization-table th, .optimization-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); font-size: 13px; text-align: left; }
 .optimization-table th { background: #f1f5f6; color: #65747f; font-size: 11px; }
 .optimization-table tr:last-child td { border-bottom: 0; }
+.optimization-table .example-image-heading { width: 148px; text-align: center; }
+.example-image-placeholder { width: 112px; aspect-ratio: 4 / 3; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px; border: 1px dashed #c8d3d9; border-radius: 7px; color: #7e8d97; background: linear-gradient(135deg, #f8fafb, #eef3f5); }
+.example-image-placeholder span { font-size: 11px; font-weight: 700; }
+.example-image-placeholder small { color: #9aa8b1; font-size: 9px; }
 .carousel-order { margin-top: 18px; padding: 24px 26px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
-.carousel-order ol { display: grid; grid-template-columns: repeat(7, 1fr); list-style-position: inside; }
-.carousel-order li { padding: 8px 14px; border-right: 1px solid var(--border); color: #52616d; font-size: 12px; }
+.carousel-order-lead { margin: -7px 0 18px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.carousel-order ol { display: grid; grid-template-columns: repeat(7, 1fr); counter-reset: carousel-step; list-style: none; }
+.carousel-order li { min-width: 0; padding: 8px 14px; border-right: 1px solid var(--border); color: #52616d; font-size: 12px; counter-increment: carousel-step; }
+.carousel-order li::before { content: counter(carousel-step, decimal-leading-zero); display: block; margin-bottom: 8px; color: #a27842; font-family: Georgia, serif; font-size: 10px; }
+.carousel-order li strong { display: block; color: #394853; font-size: 11px; line-height: 1.5; }
+.carousel-order li small { display: block; margin-top: 4px; color: #83919a; font-size: 9px; line-height: 1.5; }
 .carousel-order li:last-child { border-right: 0; }
 .detail-module-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .detail-module-list article { min-height: 120px; padding: 22px; display: flex; gap: 15px; border: 1px solid var(--border); border-radius: 9px; background: #fff; }
@@ -127,6 +135,6 @@
         word-break: keep-all;
         overflow-wrap: normal;
     }
-    .optimization-table { min-width: 560px; }
+    .optimization-table { min-width: 720px; }
     .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
 }
