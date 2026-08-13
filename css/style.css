@@ -1085,8 +1085,7 @@ body.dark .top-navigation a {
 
 .optimization-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    margin-top: 12px;
+    grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
     border: 1px solid var(--border);
     border-radius: 10px;
@@ -1095,7 +1094,7 @@ body.dark .top-navigation a {
 
 .optimization-grid > a {
     min-width: 0;
-    min-height: 160px;
+    min-height: 210px;
     padding: 24px 26px;
     display: flex;
     flex-direction: column;
@@ -1171,6 +1170,25 @@ body.dark .top-navigation a {
     color: var(--muted);
     font-size: 12px;
     line-height: 1.6;
+}
+
+.optimization-grid ul {
+    margin: 14px 0 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    list-style: none;
+}
+
+.optimization-grid li {
+    padding: 5px 9px;
+    border: 1px solid #dfe6e9;
+    border-radius: 999px;
+    color: #667783;
+    background: #f7f9fa;
+    font-size: 10px;
+    white-space: nowrap;
 }
 
 .optimization-grid > a > span {

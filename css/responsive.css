@@ -8,7 +8,7 @@
     }
 
     .optimization-grid {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .direction-grid {
@@ -146,7 +146,7 @@
     }
 
     .optimization-grid > a {
-        min-height: 138px;
+        min-height: 190px;
         border-bottom: 1px solid var(--border);
     }
 
