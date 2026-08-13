@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1080" role="img" aria-labelledby="title desc">
+  <title id="title">案例图片待替换</title>
+  <desc id="desc">用于AI视觉优化页面的临时图片占位符</desc>
+  <rect width="900" height="1080" fill="#f2f5f6"/>
+  <rect x="42" y="42" width="816" height="996" rx="24" fill="none" stroke="#cbd6dc" stroke-width="3" stroke-dasharray="12 12"/>
+  <path d="M345 526l70-78 60 62 45-42 83 93H297z" fill="#d9e2e6"/>
+  <circle cx="390" cy="410" r="35" fill="#d9e2e6"/>
+  <text x="450" y="640" text-anchor="middle" fill="#6f818b" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">案例图片待替换</text>
+  <text x="450" y="690" text-anchor="middle" fill="#9aa9b1" font-family="Arial, PingFang SC, Microsoft YaHei, sans-serif" font-size="22">建议使用同尺寸竖版图片</text>
+</svg>
