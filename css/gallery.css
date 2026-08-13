@@ -16,10 +16,20 @@
     width: min(1200px, calc(100% - 40px));
     min-height: 70px;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
+}
+
+.gallery-site-logo {
+    font-size: 19px;
+}
+
+.gallery-site-logo .site-logo-mark {
+    width: 36px;
+    height: 36px;
 }
 
 .gallery-back {
@@ -462,6 +472,27 @@ body.dark .gallery-placeholder-image small {
     .gallery-header-inner,
     .gallery-main {
         width: calc(100% - 24px);
+    }
+
+    .gallery-header-inner {
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 10px;
+    }
+
+    .gallery-site-logo {
+        gap: 7px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .gallery-site-logo .site-logo-mark {
+        width: 30px;
+        height: 30px;
+    }
+
+    .gallery-back {
+        font-size: 12px;
+        white-space: nowrap;
     }
 
     .gallery-main {

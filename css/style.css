@@ -198,11 +198,21 @@ a {
 }
 
 .notice-topbar {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 38px;
+}
+
+.notice-site-logo {
+    font-size: 19px;
+}
+
+.notice-site-logo .site-logo-mark {
+    width: 36px;
+    height: 36px;
 }
 
 .notice-back {
@@ -535,6 +545,23 @@ body.dark .gcc-rule-type {
 
     .notice-topbar {
         margin-bottom: 27px;
+        grid-template-columns: minmax(0, 1fr) auto auto;
+        gap: 10px;
+    }
+
+    .notice-site-logo {
+        gap: 7px;
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .notice-site-logo .site-logo-mark {
+        width: 30px;
+        height: 30px;
+    }
+
+    .notice-back {
+        white-space: nowrap;
     }
 
     .notice-header {
