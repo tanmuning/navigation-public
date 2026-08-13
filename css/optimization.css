@@ -33,7 +33,8 @@
 .keyword-priority li { position: relative; padding: 2px 15px; border-right: 1px solid var(--border); color: #51616c; font-size: 11px; text-align: center; white-space: nowrap; }
 .keyword-priority li:last-child { border-right: 0; }
 .keyword-priority li::before { content: counter(list-item, decimal-leading-zero); display: block; margin-bottom: 4px; color: #9a713d; font-family: Georgia, serif; font-size: 10px; }
-.formal-keyword-library { margin-top: 18px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+#title-keywords { display: flex; flex-direction: column; }
+.formal-keyword-library { order: 10; margin-top: 18px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
 .keyword-library-heading { padding: 24px 26px; display: flex; align-items: flex-end; justify-content: space-between; gap: 28px; border-bottom: 1px solid var(--border); }
 .keyword-library-heading > div { min-width: 0; }
 .keyword-library-heading small { color: #9a713d; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
