@@ -1085,33 +1085,85 @@ body.dark .top-navigation a {
 
 .optimization-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: #fff;
 }
 
-.optimization-grid article,
 .optimization-grid > a {
     min-width: 0;
-    padding: 15px 28px;
+    min-height: 160px;
+    padding: 24px 26px;
     display: flex;
-    align-items: flex-start;
-    gap: 14px;
+    flex-direction: column;
+    align-items: stretch;
     border-right: 1px solid var(--border);
 }
 
-.optimization-grid article:last-child,
 .optimization-grid > a:last-child {
     border-right: 0;
 }
 
-.optimization-grid article > span,
-.optimization-grid > a > span {
-    color: #9baebc;
-    font-family: Georgia, serif;
-    font-size: 13px;
+.optimization-section-lead {
+    margin: -2px 0 17px 15px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.optimization-diagnosis-entry {
+    min-height: 88px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    border: 1px solid #cedae0;
+    border-radius: 10px;
+    background: #eef3f5;
+}
+
+.optimization-diagnosis-entry div {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: baseline;
+    gap: 5px 14px;
+}
+
+.optimization-diagnosis-entry small {
+    color: #9a713d;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.optimization-diagnosis-entry strong {
+    font-size: 15px;
+}
+
+.optimization-diagnosis-entry span {
+    grid-column: 2;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.optimization-diagnosis-entry b {
+    flex-shrink: 0;
+    color: #8d693a;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.optimization-grid > a > small {
+    color: #9a713d;
+    font-size: 10px;
+    font-weight: 800;
 }
 
 .optimization-grid h3 {
-    margin-bottom: 7px;
+    margin: 9px 0 8px;
     font-size: 16px;
 }
 
@@ -1119,6 +1171,30 @@ body.dark .top-navigation a {
     color: var(--muted);
     font-size: 12px;
     line-height: 1.6;
+}
+
+.optimization-grid > a > span {
+    margin-top: auto;
+    padding-top: 15px;
+    color: #8d693a;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.optimization-analysis-entry {
+    min-height: 46px;
+    padding: 13px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    border-bottom: 1px solid var(--border);
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.optimization-analysis-entry strong {
+    color: #7f653e;
 }
 
 .direction-grid {
