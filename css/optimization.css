@@ -90,6 +90,7 @@
 .carousel-order li { min-width: 0; padding: 8px 14px; border-right: 1px solid var(--border); color: #52616d; font-size: 12px; counter-increment: carousel-step; }
 .carousel-order li::before { content: counter(carousel-step, decimal-leading-zero); display: block; margin-bottom: 8px; color: #a27842; font-family: Georgia, serif; font-size: 10px; }
 .carousel-order li img { width: 100%; aspect-ratio: 3 / 4; margin-bottom: 11px; display: block; object-fit: cover; border: 1px solid #d8e0e4; border-radius: 7px; background: #f3f6f7; }
+.carousel-order li img.size-guide-image { object-position: center top; }
 .carousel-order li strong { display: block; color: #394853; font-size: 11px; line-height: 1.5; }
 .carousel-order li small { display: block; margin-top: 4px; color: #83919a; font-size: 9px; line-height: 1.5; }
 .carousel-order li:last-child { border-right: 0; }
