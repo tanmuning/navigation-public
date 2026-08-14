@@ -85,7 +85,7 @@
 .visual-check-grid article:last-child { border-right: 0; }
 .visual-check-grid span { color: #9a713d; font-family: Georgia, serif; font-size: 12px; }
 .visual-check-grid strong { display: block; margin: 11px 0 8px; }
-.visual-check-grid p { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.visual-check-grid p { color: var(--muted); font-size: 12px; line-height: 1.7; text-wrap: pretty; }
 .table-wrap { margin-top: 18px; overflow-x: auto; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
 .optimization-table { width: 100%; border-collapse: collapse; }
 .optimization-table th, .optimization-table td { padding: 15px 20px; border-bottom: 1px solid var(--border); font-size: 13px; text-align: left; }
