@@ -96,6 +96,15 @@
 .detail-module-list article > span { color: #9a713d; font-family: Georgia, serif; }
 .detail-module-list strong { display: block; margin-bottom: 8px; }
 .detail-module-list p { color: var(--muted); font-size: 12px; line-height: 1.7; }
+.detail-case-heading { margin-top: 26px; }
+.detail-case-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.detail-case-card { overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.detail-case-card > a { display: block; padding: 16px; background: #eee7df; }
+.detail-case-card img { width: 100%; height: 680px; display: block; object-fit: contain; }
+.detail-case-card > div { padding: 20px 22px 22px; }
+.detail-case-card small { color: #9a713d; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
+.detail-case-card h3 { margin: 7px 0 8px; font-size: 16px; }
+.detail-case-card p { color: var(--muted); font-size: 12px; line-height: 1.7; }
 .observation-note { margin-top: 18px; padding: 17px 20px; border-left: 3px solid #9a713d; background: #f3f6f7; color: #596873; font-size: 12px; line-height: 1.7; }
 .static-checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: var(--border); }
 .static-checklist p { padding: 17px 20px; background: #fff; color: #465661; font-size: 13px; }
@@ -108,6 +117,7 @@
     .visual-check-grid article:nth-child(2) { border-right: 0; }
     .visual-check-grid article:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
     .detail-module-list { grid-template-columns: repeat(2, 1fr); }
+    .detail-case-card img { height: 560px; }
     .carousel-order ol { grid-template-columns: repeat(4, 1fr); }
     .title-formula-stack { grid-template-columns: 1fr; }
     .keyword-priority { grid-template-columns: 1fr; gap: 12px; }
@@ -121,6 +131,9 @@
     .optimization-intro { padding: 30px 24px; }
     .diagnosis-entry-section { padding: 25px 20px; }
     .diagnosis-grid, .optimization-two-column, .visual-check-grid, .detail-module-list, .static-checklist, .category-title-grid { grid-template-columns: 1fr; }
+    .detail-case-grid { grid-template-columns: 1fr; }
+    .detail-case-card > a { padding: 10px; }
+    .detail-case-card img { height: auto; }
     .title-template-wide { grid-column: auto; }
     .formula-box { padding: 21px 20px; }
     .formula-box strong { font-size: 15px; word-break: keep-all; overflow-wrap: normal; }
