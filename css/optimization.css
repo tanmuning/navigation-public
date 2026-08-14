@@ -106,8 +106,10 @@
 .detail-case-card h3 { margin: 7px 0 8px; font-size: 16px; }
 .detail-case-card p { color: var(--muted); font-size: 12px; line-height: 1.7; }
 .observation-note { margin-top: 18px; padding: 17px 20px; border-left: 3px solid #9a713d; background: #f3f6f7; color: #596873; font-size: 12px; line-height: 1.7; }
-.static-checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: var(--border); }
-.static-checklist p { padding: 17px 20px; background: #fff; color: #465661; font-size: 13px; }
+.checklist-panel { margin-top: 18px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
+.checklist-panel .visual-subheading { margin: 0; padding: 22px 24px; border-bottom: 1px solid var(--border); }
+.static-checklist { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); }
+.static-checklist p { min-height: 58px; padding: 17px 20px; display: flex; align-items: center; background: #fff; color: #465661; font-size: 13px; }
 .static-checklist p::before { content: "—"; margin-right: 11px; color: #9a713d; }
 .optimization-contact { margin-top: 18px; padding: 23px 26px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-radius: 10px; background: #324654; color: #fff; }
 .optimization-contact small { display: block; margin-bottom: 5px; color: #c6d1d8; }
