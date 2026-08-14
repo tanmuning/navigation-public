@@ -67,7 +67,6 @@
 .example-box > span { color: #9aabb7; }
 .visual-check-grid { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); border-radius: 10px; background: #fff; }
 .visual-intro-panel { margin-bottom: 18px; padding: 24px 26px; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
-.visual-intro-panel .optimization-heading { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
 .visual-intro-panel .visual-subheading { margin: 0; }
 .visual-check-grid article { min-width: 0; padding: 23px; border-right: 1px solid var(--border); }
 .visual-check-grid article:last-child { border-right: 0; }
@@ -184,7 +183,6 @@
     .plain-check-list li { font-size: 12px; }
     .title-note, .observation-note { padding: 15px 16px; font-size: 11px; }
     .visual-intro-panel { padding: 18px 16px; }
-    .visual-intro-panel .optimization-heading { margin-bottom: 16px; padding-bottom: 16px; }
     .visual-subheading { display: block; }
     .visual-subheading > span { min-width: 0; display: inline-block; margin-bottom: 8px; }
     .visual-subheading h3 { font-size: 15px; line-height: 1.45; }
