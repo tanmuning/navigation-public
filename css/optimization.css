@@ -20,9 +20,10 @@
 .formula-box { padding: 24px 28px; border: 1px solid var(--border); border-left: 3px solid #b88a50; border-radius: 9px; background: #fff; }
 .formula-box small { display: block; margin-bottom: 9px; color: var(--muted); }
 .formula-box strong { font-size: 17px; line-height: 1.7; }
+.formula-box strong span { display: inline-block; white-space: nowrap; }
 .formula-box p { margin-top: 8px; color: var(--muted); font-size: 11px; line-height: 1.65; }
 .title-formula-stack { display: grid; grid-template-columns: .52fr minmax(0, 1fr); gap: 14px; }
-.formula-core { border-left-color: #7d95a4; }
+.formula-core { border-left-color: #b88a50; }
 .keyword-priority { margin-top: 14px; padding: 17px 21px; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 20px; border: 1px solid var(--border); border-radius: 9px; background: #f1f5f6; }
 .keyword-priority > span { color: #8f6a3a; font-size: 11px; font-weight: 800; white-space: nowrap; }
 .keyword-priority ol { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); list-style: none; }
@@ -184,7 +185,7 @@
     .detail-case-card img { height: auto; }
     .title-template-wide { grid-column: auto; }
     .formula-box { padding: 19px 17px; }
-    .formula-box strong { font-size: 14px; line-height: 1.8; word-break: normal; overflow-wrap: break-word; }
+    .formula-box strong { font-size: 14px; line-height: 1.8; }
     .formula-box p { font-size: 10px; }
     .keyword-priority { padding: 14px; gap: 10px; }
     .keyword-priority ol { grid-template-columns: repeat(2, 1fr); }
