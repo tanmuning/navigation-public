@@ -42,7 +42,7 @@
 .title-template-card > div small { color: #9a713d; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
 .title-template-card h3 { margin: 6px 0 14px; font-size: 16px; }
 .title-template-card p { color: #52616c; font-size: 12px; line-height: 1.72; }
-.title-template-card .template-formula { min-height: 54px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #edf0f2; color: #768691; font-size: 11px; }
+.title-template-card .template-formula { min-height: 54px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid #edf0f2; color: #768691; font-size: 11px; word-break: keep-all; overflow-wrap: normal; }
 .title-template-card > p:last-child { color: #394b56; }
 .title-template-card > p:last-child b { color: #9a713d; }
 .title-template-wide { grid-column: 1 / -1; }
