@@ -32,10 +32,15 @@
 .keyword-priority li:last-child { border-right: 0; }
 .keyword-priority li::before { content: counter(list-item, decimal-leading-zero); display: block; margin-bottom: 4px; color: #9a713d; font-family: Georgia, serif; font-size: 10px; }
 .title-guidance-card { margin-top: 14px; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; background: #fff; }
-.title-resource-copy { padding: 17px 20px; border-bottom: 1px solid var(--border); background: #f3f6f7; color: #596873; font-size: 12px; line-height: 1.75; }
+.title-resource-copy { padding: 14px 18px; border-bottom: 1px solid var(--border); background: #fff; color: #596873; font-size: 11px; line-height: 1.7; }
 .title-guidance-card .keyword-priority { margin: 0; border: 0; border-bottom: 1px solid var(--border); border-radius: 0; }
 .title-guidance-card .title-rules-columns { margin: 0; }
 .title-guidance-card .title-rules-columns .guide-panel { border: 0; border-bottom: 1px solid var(--border); border-radius: 0; }
+.title-guidance-card .keyword-priority { padding: 14px 18px; background: #fff; }
+.title-guidance-card .title-rules-columns .guide-panel { padding: 18px 20px; }
+.title-guidance-card .title-rules-columns .guide-panel h3 { margin-bottom: 13px; font-size: 15px; }
+.title-guidance-card .keyword-library-heading { padding: 16px 18px; }
+.title-guidance-card .keyword-library-heading h3 { margin: 0; font-size: 15px; }
 .keyword-library-heading { padding: 20px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
 .keyword-library-heading > div { min-width: 0; }
 .keyword-library-heading small { color: #9a713d; font-size: 10px; font-weight: 800; letter-spacing: .08em; }
