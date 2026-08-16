@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     title.textContent = gallery.title;
     count.textContent = "正在加载图片…";
 
-    initGalleryTheme();
     initLightbox();
     initGalleryContact(gallery);
     renderPriorityGuide(gallery);
@@ -306,32 +305,6 @@ function initLightbox() {
             closeLightbox();
         }
     });
-}
-
-function initGalleryTheme() {
-    const button = document.getElementById("galleryThemeToggle");
-    const savedTheme = localStorage.getItem("navigation-theme");
-
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark");
-    }
-
-    updateGalleryThemeButton(button);
-
-    button.addEventListener("click", function () {
-        document.body.classList.toggle("dark");
-        localStorage.setItem(
-            "navigation-theme",
-            document.body.classList.contains("dark") ? "dark" : "light"
-        );
-        updateGalleryThemeButton(button);
-    });
-}
-
-function updateGalleryThemeButton(button) {
-    const isDark = document.body.classList.contains("dark");
-    button.textContent = isDark ? "☀️" : "🌙";
-    button.setAttribute("aria-label", isDark ? "切换浅色模式" : "切换深色模式");
 }
 
 function initGalleryContact(gallery) {

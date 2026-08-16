@@ -17,7 +17,7 @@
     min-height: 70px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr auto auto;
+    grid-template-columns: 1fr auto;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
@@ -40,14 +40,6 @@
 
 .gallery-back:hover {
     color: var(--primary);
-}
-
-.gallery-theme-toggle {
-    width: 40px;
-    height: 40px;
-    border: 0;
-    border-radius: 50%;
-    background: #eef4ff;
 }
 
 .gallery-main {
@@ -426,48 +418,6 @@
     overflow: hidden;
 }
 
-body.dark .gallery-header {
-    background: rgba(16, 23, 38, 0.94);
-}
-
-body.dark .gallery-theme-toggle {
-    background: #26364a;
-}
-
-body.dark .gallery-contact-banner {
-    border-color: #354a65;
-    border-left-color: var(--primary);
-    background: #202c40;
-}
-
-body.dark .gallery-wechat-copy {
-    border-color: #40536d;
-    background: #26364a;
-    color: #b9cce3;
-}
-
-body.dark .gallery-tag-badge {
-    border-color: #675a3b;
-    background: #3a3323;
-    color: #dcc888;
-}
-
-body.dark .gallery-priority-guide {
-    background: rgba(25, 34, 53, 0.7);
-}
-
-body.dark .gallery-placeholder-image {
-    background:
-        linear-gradient(135deg, transparent 49.6%, #344054 49.8%, #344054 50.2%, transparent 50.4%),
-        linear-gradient(45deg, transparent 49.6%, #344054 49.8%, #344054 50.2%, transparent 50.4%),
-        #202a3c;
-}
-
-body.dark .gallery-placeholder-image span,
-body.dark .gallery-placeholder-image small {
-    background: rgba(32, 42, 60, 0.94);
-}
-
 @media (max-width: 560px) {
     .gallery-header-inner,
     .gallery-main {
@@ -475,7 +425,7 @@ body.dark .gallery-placeholder-image small {
     }
 
     .gallery-header-inner {
-        grid-template-columns: minmax(0, 1fr) auto auto;
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: 10px;
     }
 

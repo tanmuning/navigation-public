@@ -4,63 +4,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    initTheme();
     initBackToTop();
     initNavigation();
 
 });
-
-
-function initTheme() {
-
-    const themeToggle = document.getElementById("themeToggle");
-
-    if (!themeToggle) return;
-
-    const savedTheme = localStorage.getItem("navigation-theme");
-
-    if (savedTheme === "dark") {
-
-        document.body.classList.add("dark");
-
-    }
-
-    updateThemeButton();
-
-    themeToggle.addEventListener("click", () => {
-
-        document.body.classList.toggle("dark");
-
-        const isDark = document.body.classList.contains("dark");
-
-        localStorage.setItem(
-            "navigation-theme",
-            isDark ? "dark" : "light"
-        );
-
-        updateThemeButton();
-
-    });
-
-}
-
-
-function updateThemeButton() {
-
-    const themeToggle = document.getElementById("themeToggle");
-
-    if (!themeToggle) return;
-
-    const isDark = document.body.classList.contains("dark");
-
-    themeToggle.textContent = isDark ? "☀️" : "🌙";
-
-    themeToggle.setAttribute(
-        "aria-label",
-        isDark ? "切换浅色模式" : "切换深色模式"
-    );
-
-}
 
 
 function initBackToTop() {
