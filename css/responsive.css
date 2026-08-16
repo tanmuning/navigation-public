@@ -104,6 +104,23 @@
         gap: 2px;
     }
 
+    .faq-panel summary {
+        padding: 14px 15px;
+        gap: 10px;
+    }
+
+    .faq-panel summary strong {
+        min-width: 0;
+        font-size: 13px;
+        word-break: keep-all;
+        overflow-wrap: break-word;
+    }
+
+    .faq-answer {
+        padding: 0 15px 16px 37px;
+        font-size: 12px;
+    }
+
     .direction-card {
         min-width: 0;
         min-height: 132px;

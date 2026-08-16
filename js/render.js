@@ -85,6 +85,8 @@ function renderAnnouncements() {
 function initHomeServices() {
     const pathToggle = document.getElementById("pathToggle");
     const pathPanel = document.getElementById("featuredPath");
+    const faqToggle = document.getElementById("faqToggle");
+    const faqPanel = document.getElementById("faqPanel");
 
     if (pathToggle && pathPanel) {
         pathToggle.setAttribute("aria-expanded", String(!pathPanel.hidden));
@@ -95,7 +97,22 @@ function initHomeServices() {
             });
             pathPanel.hidden = !willOpen;
             pathToggle.setAttribute("aria-expanded", String(willOpen));
+            if (faqToggle) faqToggle.setAttribute("aria-expanded", "false");
             if (willOpen) pathPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        });
+    }
+
+    if (faqToggle && faqPanel) {
+        faqToggle.setAttribute("aria-expanded", String(!faqPanel.hidden));
+        faqToggle.addEventListener("click", function () {
+            const willOpen = faqPanel.hidden;
+            document.querySelectorAll(".service-detail-panel").forEach(function (panel) {
+                panel.hidden = true;
+            });
+            faqPanel.hidden = !willOpen;
+            faqToggle.setAttribute("aria-expanded", String(willOpen));
+            if (pathToggle) pathToggle.setAttribute("aria-expanded", "false");
+            if (willOpen) faqPanel.scrollIntoView({ behavior: "smooth", block: "nearest" });
         });
     }
 
@@ -105,11 +122,6 @@ function initHomeServices() {
         });
     });
 
-    document.querySelectorAll(".pending-service").forEach(function (button) {
-        button.addEventListener("click", function () {
-            showToast("内容正在完善中");
-        });
-    });
 }
 
 function renderFeaturedPath() {
