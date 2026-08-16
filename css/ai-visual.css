@@ -36,16 +36,6 @@
 .expansion-grid ol { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; overflow: hidden; list-style: none; border: 1px solid var(--border); border-radius: 9px; background: var(--border); }
 .expansion-grid li { min-height: 66px; padding: 14px 17px; display: flex; align-items: center; gap: 13px; background: #fff; color: #455762; font-size: 12px; }
 .expansion-grid b { color: #9a713d; font-family: Georgia, serif; font-size: 11px; }
-.case-list { display: grid; gap: 18px; }
-.case-list > article { padding: 25px; display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(260px, .8fr); gap: 28px; align-items: center; border: 1px solid var(--border); border-radius: 12px; background: #fff; }
-.case-images { display: grid; grid-template-columns: 1fr 28px 1fr; align-items: center; gap: 11px; }
-.case-images figure { min-width: 0; }
-.case-images figcaption { margin-bottom: 8px; color: var(--muted); font-size: 11px; }
-.case-images img { width: 100%; aspect-ratio: 4 / 3; display: block; object-fit: cover; border-radius: 8px; }
-.case-images > span { color: #9aaaB3; font-size: 22px; text-align: center; }
-.case-copy > small { color: #9a713d; font-size: 11px; font-weight: 800; letter-spacing: .1em; }
-.case-copy h3 { margin: 9px 0 17px; font-size: 20px; }
-.case-copy p { padding: 7px 0; color: #586873; font-size: 12px; line-height: 1.65; }
 .practice-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .practice-steps article { overflow: hidden; border: 1px solid var(--border); border-radius: 11px; background: #fff; }
 .practice-steps img { width: 100%; aspect-ratio: 16 / 9; display: block; object-fit: cover; border-bottom: 1px solid var(--border); }
@@ -79,7 +69,6 @@
 .review-columns li::before { content: "—"; margin-right: 9px; color: #9a713d; }
 
 @media (max-width: 960px) {
-    .case-list > article { grid-template-columns: 1fr; }
     .practice-steps { grid-template-columns: repeat(2, 1fr); }
 }
 
@@ -99,10 +88,7 @@
     .source-image { width: min(100%, 330px); margin: 0 auto; }
     .expansion-arrow { transform: rotate(90deg); }
     .expansion-grid ol { grid-template-columns: 1fr; }
-    .case-list > article { padding: 18px; gap: 21px; }
-    .case-images { grid-template-columns: 1fr 20px 1fr; gap: 6px; }
-    .case-images figcaption { white-space: nowrap; }
     .practice-expansion ol { grid-template-columns: 1fr; }
     .ai-visual-top-nav { display: none; }
-    .ai-visual-hero h1, .ai-section-heading h2, .change-grid h3, .direction-combo-grid h3, .case-copy h3, .prompt-box h3, .review-columns h3 { word-break: keep-all; overflow-wrap: normal; }
+    .ai-visual-hero h1, .ai-section-heading h2, .change-grid h3, .prompt-box h3, .review-columns h3 { word-break: keep-all; overflow-wrap: normal; }
 }
