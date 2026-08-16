@@ -11,6 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     });
+
+    document.querySelectorAll("[data-copy-text]").forEach(function (button) {
+        button.addEventListener("click", function () {
+            copyVisualText(button.dataset.copyText).then(function () {
+                const original = button.textContent;
+                button.textContent = "微信号已复制";
+                showVisualToast("微信号已复制");
+                window.setTimeout(function () { button.textContent = original; }, 1400);
+            });
+        });
+    });
 });
 
 async function copyVisualText(text) {

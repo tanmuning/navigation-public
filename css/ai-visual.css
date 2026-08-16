@@ -39,6 +39,17 @@
 .ai-tool-links a:last-child { border-right: 0; }
 .ai-tool-links strong { margin-bottom: 5px; font-size: 14px; }
 .ai-tool-links span { color: var(--muted); font-size: 11px; }
+.buyer-guidance-card { overflow: hidden; border: 1px solid var(--border); border-radius: 11px; background: #fff; }
+.buyer-guidance-intro { display: grid; grid-template-columns: repeat(3, 1fr) auto; align-items: stretch; border-bottom: 1px solid var(--border); }
+.buyer-guidance-intro > div { min-width: 0; padding: 19px 20px; display: flex; flex-direction: column; border-right: 1px solid var(--border); }
+.buyer-guidance-intro strong { margin-bottom: 6px; font-size: 14px; }
+.buyer-guidance-intro span { color: var(--muted); font-size: 11px; line-height: 1.65; }
+.buyer-guidance-intro > button { padding: 19px 22px; border: 0; background: transparent; color: #8b652f; font-size: 12px; font-weight: 800; white-space: nowrap; cursor: pointer; }
+.buyer-chat-grid { padding: 18px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.buyer-chat-grid figure { min-width: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 8px; background: #f5f6f7; }
+.buyer-chat-grid a { display: block; }
+.buyer-chat-grid img { width: 100%; aspect-ratio: 9 / 14; display: block; object-fit: cover; object-position: top; }
+.buyer-chat-grid figcaption { padding: 11px 12px; background: #fff; color: #455661; font-size: 11px; font-weight: 700; text-align: center; white-space: nowrap; }
 .review-columns { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .review-columns article { padding: 26px; border: 1px solid var(--border); border-top: 3px solid #7893a3; border-radius: 10px; background: #fff; }
 .review-columns article.danger { border-top-color: #b78855; }
@@ -60,6 +71,11 @@
     .change-grid article, .change-grid article:nth-child(2n), .change-grid article:nth-last-child(-n+2) { border-right: 0; border-bottom: 1px solid var(--border); }
     .change-grid article:last-child { border-bottom: 0; }
     .change-examples { max-width: 330px; }
+    .buyer-guidance-intro { grid-template-columns: 1fr; }
+    .buyer-guidance-intro > div { border-right: 0; border-bottom: 1px solid var(--border); }
+    .buyer-guidance-intro > button { text-align: center; }
+    .buyer-chat-grid { padding: 10px; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+    .buyer-chat-grid figcaption { padding-inline: 6px; font-size: 10px; }
     .ai-visual-top-nav { display: none; }
     .ai-visual-hero h1, .ai-section-heading h2, .change-grid h3, .prompt-box h3, .review-columns h3 { word-break: keep-all; overflow-wrap: normal; }
 }
